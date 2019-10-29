@@ -12,7 +12,6 @@
 ### AI
  - [ ] Static spawns, no movement but attacking towards player
  - [ ] Movement towards player or "random" movement
- - [ ] 
 
 
 ## Extra features (prioritization todo)
@@ -26,7 +25,7 @@
 
 ### Environment
  - [ ] Procedurally generated tilemaps
- - [ ] 
+ - [ ] Breakable spawns
 
 ### AI
  - [ ] Procedurally generated enemies
@@ -36,5 +35,5 @@
  - [ ] "Flocking" AI
 
 ### Roguelike
- - [ ] Unlucks across play-sessions
+ - [ ] Unlocks across play-sessions
 
