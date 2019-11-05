@@ -9,6 +9,11 @@ public class PlayerAttack : MonoBehaviour
     public float coolDown;
 
 
+    void Start()
+    {
+        coolDown = 0;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -21,7 +26,7 @@ public class PlayerAttack : MonoBehaviour
             if (Input.GetButtonDown("Fire1"))
             {
                 Shoot();
-                coolDown = 4;
+                coolDown = 3;
             }
         }
     }
