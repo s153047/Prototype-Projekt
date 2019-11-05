@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-	Rigidbody2D rigidbody2d;
+	public Rigidbody2D rigidbody2d;
     // Start is called before the first frame update
+    public float speed;
     void Start()
     {
     	rigidbody2d = GetComponent<Rigidbody2D>();
@@ -17,8 +18,8 @@ public class PlayerController : MonoBehaviour
         float vertical = Input.GetAxis("Vertical");
 
         Vector2 position = rigidbody2d.position;
-        position.x += 3.0f * horizontal * Time.deltaTime;
-        position.y += 3.0f * vertical * Time.deltaTime;
+        position.x += 3.0f * horizontal * Time.deltaTime * speed;
+        position.y += 3.0f * vertical * Time.deltaTime * speed;
 
         rigidbody2d.position = position;
     }
