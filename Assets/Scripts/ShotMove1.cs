@@ -24,6 +24,11 @@ public class ShotMove1 : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.gameObject.CompareTag("Enemy")){
+            EnemyStats enemy = other.GetComponent<EnemyStats>();
+            enemy.TakeDamage(50);
+            Destroy(gameObject);
+        }
 
     }
 
