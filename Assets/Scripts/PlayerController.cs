@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
+    public float speed;
     void Start()
     {
     }
@@ -14,8 +15,8 @@ public class PlayerController : MonoBehaviour
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
         Vector2 position = transform.position;
-        position.x += 3.0f * horizontal * Time.deltaTime;
-        position.y += 3.0f * vertical * Time.deltaTime;
+        position.x += 3.0f * horizontal * Time.deltaTime * speed;
+        position.y += 3.0f * vertical * Time.deltaTime * speed;
         transform.position = position;
     }
 }

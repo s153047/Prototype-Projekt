@@ -1,0 +1,33 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerAttack : MonoBehaviour
+{
+    public Transform firePoint;
+    public GameObject shotPrefab;
+    public float coolDown;
+
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (coolDown > 0)
+        {
+            coolDown -= Time.deltaTime;
+        }
+        else
+        {
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Shoot();
+                coolDown = 4;
+            }
+        }
+    }
+
+    void Shoot()
+    {
+        Instantiate(shotPrefab, firePoint.position, firePoint.rotation);
+    }
+}
