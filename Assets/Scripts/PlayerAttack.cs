@@ -7,26 +7,27 @@ public class PlayerAttack : MonoBehaviour
     public Transform firePoint;
     public GameObject shotPrefab;
     public float coolDown;
+    float currentCoolDown;
 
 
     void Start()
     {
-        coolDown = 0;
+        currentCoolDown = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (coolDown > 0)
+        if (currentCoolDown > 0)
         {
-            coolDown -= Time.deltaTime;
+            currentCoolDown -= Time.deltaTime;
         }
         else
         {
             if (Input.GetButtonDown("Fire1"))
             {
                 Shoot();
-                coolDown = 3;
+                currentCoolDown = coolDown;
             }
         }
     }
