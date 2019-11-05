@@ -28,6 +28,8 @@ public class ShotMove1 : MonoBehaviour
             EnemyStats enemy = other.GetComponent<EnemyStats>();
             enemy.TakeDamage(50);
             Destroy(gameObject);
+        } else if (other.gameObject.CompareTag("Walls")){
+            Destroy(gameObject);
         }
 
     }
