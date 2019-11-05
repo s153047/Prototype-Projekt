@@ -6,8 +6,10 @@ public class PlayerStats : MonoBehaviour
 {
     // Start is called before the first frame update
     public int health;
+    public int damageGive;
 
     public void TakeDamage (int damage)
+
     {
         health -= damage;
         if (health <= 0)
@@ -16,6 +18,11 @@ public class PlayerStats : MonoBehaviour
         }
     }
 
+    void Start()
+    {
+        health = 100;
+        damageGive = 50;
+    } 
     // Update is called once per frame
     void Update()
     {
