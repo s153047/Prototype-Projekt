@@ -5,16 +5,14 @@ using UnityEngine;
 public class ObjectBehaviour : MonoBehaviour
 {
     public float speed = 3.0f;
-    public Rigidbody2D rb;
-
+    protected Rigidbody2D rb;
     
-    
-    void Start()
+    protected virtual void Start()
     {
-        //rigidbody2D = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    protected virtual void Update()
     {
     }
     

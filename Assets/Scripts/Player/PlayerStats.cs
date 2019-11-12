@@ -7,12 +7,13 @@ public class PlayerStats : ObjectStats
     // Start is called before the first frame update
     public int damageGive;
 
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         damageGive = 50;
     } 
     // Update is called once per frame
-    void Update()
+    protected override void Update()
     {
         
     }

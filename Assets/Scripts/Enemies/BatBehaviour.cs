@@ -6,21 +6,20 @@ public class BatBehaviour : ObjectBehaviour
 {
     public float changeTime = 3.0f;
     public bool vertical;
-    
 
     float timer;
     int direction = 1;
 
-
-    void Start()
+    protected override void Start()
     {
-        //ObjectBehaviour::Start();
-        rb = GetComponent<Rigidbody2D>();
+        base.Start();
         timer = changeTime;
     }
 
-    void Update()
+    protected override void Update()
     {
+        base.Update();
+
         timer -= Time.deltaTime;
 
         if (timer < 0)

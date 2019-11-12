@@ -8,7 +8,7 @@ public class ObjectStats : MonoBehaviour
     public int health = 100;
 
 
-    public void TakeDamage (int damage)
+    public virtual void TakeDamage (int damage)
     {
         health -= damage;
         if (health <= 0)
@@ -17,12 +17,16 @@ public class ObjectStats : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
+    protected virtual void Start()
     {
         
     }
-    void Dead()
+
+    protected virtual void Update()
+    {
+        
+    }
+    protected virtual void Dead()
     {
     	Destroy(gameObject);
     }
