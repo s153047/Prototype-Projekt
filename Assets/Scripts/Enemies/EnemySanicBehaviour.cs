@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemySanicBehaviour : MonoBehaviour
+public class EnemySanicBehaviour : ObjectBehaviour
 {
-    public float speed = 3.0f;
     public Transform target;
 
-    Rigidbody2D rb;
     float timer;
 
     void Start()

@@ -157,4 +157,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  rb: {fileID: -1423917408648339810}
   target: {fileID: 8604843980792770916, guid: e7bd197645934814ca1a9a994760dfd8, type: 3}
