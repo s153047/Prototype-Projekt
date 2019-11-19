@@ -8,13 +8,8 @@ public class EnemySanicBehaviour : ObjectBehaviour
 
     float timer;
 
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-    }
-
     // Update is called once per frame
-    private void Update()
+    protected override void Update()
     {
         target = GameObject.FindWithTag("Player").transform;
         if (Vector3.Distance(transform.position, target.position) > 1f)

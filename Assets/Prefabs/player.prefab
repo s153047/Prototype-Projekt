@@ -115,7 +115,12 @@ MonoBehaviour:
   firePoint: {fileID: 8604843981374489981}
   shotPrefab: {fileID: 8160142064114305624, guid: be5d8bf8f68439b44b50bba88ee1d2eb,
     type: 3}
-  coolDown: 0.4
+  spellPrefabs:
+  - {fileID: 8160142064114305624, guid: 827c498b63aa84993b0c9bb303a8c643, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  globalCooldown: 0
 --- !u!114 &8604843980792770914
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -5,12 +5,11 @@ using UnityEngine;
 public class PlayerStats : ObjectStats
 {
     // Start is called before the first frame update
-    public int damageGive;
+    public int damageGive = 50;
 
     protected override void Start()
     {
         base.Start();
-        damageGive = 50;
     } 
     // Update is called once per frame
     protected override void Update()
