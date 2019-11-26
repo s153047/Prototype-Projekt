@@ -2,7 +2,7 @@
 
 ## Current issues/bugs
  - [ ] Fix objects push each other / maybe change movement to Rigidbody2d.addForce (google det)
- - [ ] Generaliser skud, og lav en version for enemies
+ - [x] Generaliser skud, og lav en version for enemies
  - [ ] Animation
 
 ## Minimal viable product
@@ -10,8 +10,8 @@
 ### Player
  - [x] Movement
  - [x] Basic attack
- - [ ] Take damage
- - [ ] Game over
+ - [x] Take damage
+ - [(x)] Game over
 
 
 ### Environment
@@ -31,13 +31,13 @@
  - [ ] Iventory (Gider vi ikke, bare til report)
 
 ### Player
- - [ ] Cooldown based skills, mix of aim targets or sticking to one? Like fix to enemy, free shooting, player movement
+ - [x] Cooldown based skills, mix of aim targets or sticking to one? Like fix to enemy, free shooting, player movement
 
 ### Environment
- - [ ] Procedurally generated tilemaps
+ - [x] Procedurally generated tilemaps
  - [ ] Breakable spawns (Not sure about this)
  - [ ] Spawn random enemies (Make a spawn script)
- - [ ] Generate random tilemap (Objects?)
+ - [x] Generate random tilemap (Objects?)
 
 ### AI
  - [ ] Procedurally generated enemies
