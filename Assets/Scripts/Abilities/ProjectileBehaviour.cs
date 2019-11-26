@@ -8,7 +8,7 @@ public class ProjectileBehaviour : MonoBehaviour
 	public int damage = 50;
     public float speed;
     public Rigidbody2D rb;
-    Vector3 moveDirection;
+    protected Vector3 moveDirection;
     
     protected virtual void Start()
     {

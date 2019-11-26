@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerStats : ObjectStats
 {
     // Start is called before the first frame update
-    public int damageGive = 50;
 
     protected override void Start()
     {
