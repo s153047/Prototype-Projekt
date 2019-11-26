@@ -13,7 +13,7 @@ public class PlayerStats : ObjectStats
     {
         base.TakeDamage(damage);
 
-        healthSlider.value = health / 100 * 100;
+        healthSlider.value = health;
     }
 
     protected override void Start()
@@ -22,6 +22,11 @@ public class PlayerStats : ObjectStats
 
         healthSlider = GameObject.Find("HealthSlider").GetComponent<Slider>();
     } 
+    protected override void Dead()
+    {
+        healthSlider.value = 0;
+        base.Dead();
+    }
 
     // Update is called once per frame
     protected override void Update()
