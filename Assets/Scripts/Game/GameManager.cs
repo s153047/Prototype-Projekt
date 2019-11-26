@@ -31,11 +31,11 @@ public class GameManager : MonoBehaviour
         levelTextOverlay = GameObject.Find("LevelTextOverlay");
         levelText = GameObject.Find("LevelText").GetComponent<Text>();
 
-        InitLevel();
+        InitNextLevel();
     }
 
 
-    private void InitLevel()
+    public void InitNextLevel()
     {
         ++level;
         levelText.text = "Wave " + level;
