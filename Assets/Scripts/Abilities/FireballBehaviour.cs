@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FireballBehaviour : ProjectileBehaviour
 {
+    public GameObject exploPrefab;
 	public float explosionRadius = 1.0f;
 	Vector3 endPoint;
 	protected override void Start(){
@@ -29,6 +30,7 @@ public class FireballBehaviour : ProjectileBehaviour
     }
 
     void Explode(){
+        Instantiate(exploPrefab,transform.position,transform.rotation);
     	Collider2D[] hitColliders = Physics2D.OverlapCircleAll(transform.position, explosionRadius);
     	foreach (Collider2D c in hitColliders){
     		if (c.gameObject.CompareTag("Enemy")){
