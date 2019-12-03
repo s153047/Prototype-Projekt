@@ -118,9 +118,6 @@ MonoBehaviour:
     type: 3}
   abilityScripts:
   - {fileID: 11400000, guid: cc674b310a8e9bcd7b989b297e681b97, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   globalCooldown: 0
 --- !u!114 &8604843980792770914
 MonoBehaviour:
@@ -134,7 +131,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b4aa82b01538964183b7e5c51be5465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  maxHealth: 100
   maxMana: 100
   manaRegen: 100
   damageGive: 0

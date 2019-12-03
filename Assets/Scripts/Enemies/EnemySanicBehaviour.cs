@@ -19,6 +19,9 @@ public class EnemySanicBehaviour : ObjectBehaviour
     // Update is called once per frame
     protected override void Update()
     {
+        if (player == null)
+            return;
+        
         target = player.transform;
         if (Vector3.Distance(transform.position, target.position) > 1f)
         {
