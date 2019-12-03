@@ -12,20 +12,31 @@ public class LichBehaviour : ObjectBehaviour
     float angle;
     float xOffset;
     float yOffset;
+
+    GameObject player;
     // Start is called before the first frame update
+    protected override void Start()
+    {
+        base.Start();
+
+        player = GameObject.FindWithTag("Player");
+    }
 
     // Update is called once per frame
     protected override void Update()
     {
-        target = GameObject.FindWithTag("Player").transform;
-        Vector2 direction = (Vector2)target.position - (Vector2)transform.position;
-        direction.Normalize();
-        angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        xOffset = 0 * Mathf.Cos(angle*Mathf.Deg2Rad) + 1 * Mathf.Sin(angle*Mathf.Deg2Rad);
-        yOffset = 0 * Mathf.Sin(angle * Mathf.Deg2Rad) + 1 * Mathf.Cos(angle * Mathf.Deg2Rad);
-        //RotateTowards();
-        ShootAtPlayer();
-        currentCooldown -= Time.deltaTime; 
+        if (player != null)
+        { 
+            target = player.transform;
+            Vector2 direction = (Vector2)target.position - (Vector2)transform.position;
+            direction.Normalize();
+            angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            xOffset = 0 * Mathf.Cos(angle * Mathf.Deg2Rad) + 1 * Mathf.Sin(angle * Mathf.Deg2Rad);
+            yOffset = 0 * Mathf.Sin(angle * Mathf.Deg2Rad) + 1 * Mathf.Cos(angle * Mathf.Deg2Rad);
+            //RotateTowards();
+            ShootAtPlayer();
+            currentCooldown -= Time.deltaTime;
+        }
     }
     void ShootAtPlayer()
     {
