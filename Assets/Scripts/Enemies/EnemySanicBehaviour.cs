@@ -6,12 +6,20 @@ public class EnemySanicBehaviour : ObjectBehaviour
 {
     public Transform target;
 
+    GameObject player;
     float timer;
+
+    protected override void Start()
+    {
+        base.Start();
+
+        player = GameObject.FindWithTag("Player");
+    }
 
     // Update is called once per frame
     protected override void Update()
     {
-        target = GameObject.FindWithTag("Player").transform;
+        target = player.transform;
         if (Vector3.Distance(transform.position, target.position) > 1f)
         {
             MoveTowards(target.position);

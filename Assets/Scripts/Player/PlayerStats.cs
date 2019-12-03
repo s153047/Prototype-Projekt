@@ -12,11 +12,11 @@ public class PlayerStats : ObjectStats
     private Slider healthSlider;
     float currentMana;
 
-    public override void TakeDamage(int damage)
+    public override void ChangeHealth(int damage)
     {
-        base.TakeDamage(damage);
+        base.ChangeHealth(damage);
 
-        healthSlider.value = health;
+        healthSlider.value = Health;
     }
 
     public void SpendMana(float cost){
