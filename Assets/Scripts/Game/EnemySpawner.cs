@@ -24,7 +24,14 @@ public class EnemySpawner : MonoBehaviour
 
     public void Spawn()
     {
-        
+        // If no enemies are set up to spawn, just return
+        if (enemies.Length <= 0)
+        {
+            Debug.Log("No enemies set to spawn in the spawner");
+            return;
+        }
+            
+
         enemiesLeftCurrentWave = enemyCurrentWave;
         
         while (enemiesLeftCurrentWave >= 0)
