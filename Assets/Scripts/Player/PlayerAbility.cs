@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class PlayerAbility : MonoBehaviour
 {
-    
     public Transform firePoint;
     public GameObject shotPrefab;
-    public GameObject[] spellPrefabs;
+    public Abilities[] abilityScripts;
     public float globalCooldown;
     float currentCooldown;
 
@@ -52,7 +51,7 @@ public class PlayerAbility : MonoBehaviour
     }
 
     void castSpell(int i){
-        Instantiate(spellPrefabs[i], firePoint.position, firePoint.rotation);   
+        abilityScripts[i].castSpell(gameObject, firePoint);
         currentCooldown = globalCooldown;
     }
 
