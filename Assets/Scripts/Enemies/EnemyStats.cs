@@ -15,6 +15,7 @@ public class EnemyStats : ObjectStats
         // DropManager.Instance.EnemyDied(baseDropPosition, Tier, SpecialDrops);
 
         // Need to call last to ensure we capture transform position from the dead enemy
+        GameManager.Instance.EnemyDead(gameObject);
         base.Dead();
     }
 }

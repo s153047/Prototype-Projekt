@@ -21,7 +21,6 @@ public class LichBehaviour : ObjectBehaviour
         Vector2 direction = (Vector2)target.position - (Vector2)transform.position;
         direction.Normalize();
         angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        Debug.Log(angle);
         xOffset = 0 * Mathf.Cos(angle*Mathf.Deg2Rad) + 1 * Mathf.Sin(angle*Mathf.Deg2Rad);
         yOffset = 0 * Mathf.Sin(angle * Mathf.Deg2Rad) + 1 * Mathf.Cos(angle * Mathf.Deg2Rad);
         //RotateTowards();

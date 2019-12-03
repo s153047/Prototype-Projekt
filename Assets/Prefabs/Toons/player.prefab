@@ -118,9 +118,6 @@ MonoBehaviour:
     type: 3}
   abilityScripts:
   - {fileID: 11400000, guid: cc674b310a8e9bcd7b989b297e681b97, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   globalCooldown: 0
 --- !u!114 &8604843980792770914
 MonoBehaviour:

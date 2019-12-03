@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     private GameObject levelTextOverlay;
     private Text levelText;
     private int level = 0;
+    private EnemySpawner spawner;
 
     // Todo: Maybe make generic 'Enemy' class for type safety
     private List<GameObject> enemies = new List<GameObject>();
@@ -25,15 +26,15 @@ public class GameManager : MonoBehaviour
             Instance = this;
         else if (Instance != this)
             Destroy(gameObject);
-
+        spawner = GameObject.Find("Spawner").GetComponent<EnemySpawner>();
         DontDestroyOnLoad(gameObject);
-
         levelTextOverlay = GameObject.Find("LevelTextOverlay");
         levelText = GameObject.Find("LevelText").GetComponent<Text>();
-
         InitNextLevel();
-    }
+        spawner.Spawn();
 
+
+    }
 
     public void InitNextLevel()
     {
@@ -58,5 +59,20 @@ public class GameManager : MonoBehaviour
         }
 
         levelTextOverlay.SetActive(false);
+    }
+
+    public void EnemyDead(GameObject enemy)
+    {
+        Debug.Log(enemy);
+        enemies.Remove(enemy);
+        if (enemies.Count == 0)
+        {
+            InitNextLevel();
+            spawner.Spawn();
+        }
+    }
+    public void SpawnEnemies(GameObject enemy)
+    {
+        enemies.Add(enemy);
     }
 }
