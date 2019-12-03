@@ -33,8 +33,9 @@ public class EnemySpawner : MonoBehaviour
             Vector3 pos = new Vector3(Random.Range(xMin, xMax), Random.Range(yMin, yMax), 0);
             int randomEnemy = Random.Range(0, enemies.Length);
 
-            GameObject enemy = Instantiate(enemies[randomEnemy], pos, Quaternion.identity);
-            GameManager.Instance.SpawnEnemies(enemy);
+
+            GameObject newEnemy = Instantiate(enemies[randomEnemy], pos, Quaternion.identity);
+            GameManager.Instance.SpawnEnemies(newEnemy);
             enemiesLeftCurrentWave -= enemyValue[randomEnemy];
             Debug.Log(enemies[randomEnemy]);
 
