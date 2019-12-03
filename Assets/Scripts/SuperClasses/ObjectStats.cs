@@ -5,13 +5,18 @@ using UnityEngine;
 public class ObjectStats : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int health = 100;
+    public int maxHealth = 100;
+    public int Health { get; private set; }
 
-
-    public virtual void TakeDamage (int damage)
+    public virtual void TakeDamage(int amount)
     {
-        health -= damage;
-        if (health <= 0)
+        ChangeHealth(-amount);
+    }
+
+    public virtual void ChangeHealth (int amount)
+    {
+        Health = Mathf.Clamp(Health + amount, 0, maxHealth);
+        if (Health <= 0)
         {
             Dead();
         }
@@ -19,7 +24,7 @@ public class ObjectStats : MonoBehaviour
 
     protected virtual void Start()
     {
-        
+        Health = maxHealth;
     }
 
     protected virtual void Update()

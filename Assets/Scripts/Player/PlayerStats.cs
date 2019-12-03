@@ -9,11 +9,11 @@ public class PlayerStats : ObjectStats
     public int damageGive = 50;
     private Slider healthSlider;
 
-    public override void TakeDamage(int damage)
+    public override void ChangeHealth(int damage)
     {
-        base.TakeDamage(damage);
+        base.ChangeHealth(damage);
 
-        healthSlider.value = health;
+        healthSlider.value = Health;
     }
 
     protected override void Start()

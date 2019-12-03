@@ -21,6 +21,6 @@ public class PlayerController : MonoBehaviour
         position.x += 3.0f * horizontal * Time.deltaTime * speed;
         position.y += 3.0f * vertical * Time.deltaTime * speed;
 
-        rigidbody2d.position = position;
+        rigidbody2d.MovePosition(position);
     }
 }
