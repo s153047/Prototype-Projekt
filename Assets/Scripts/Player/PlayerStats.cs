@@ -6,8 +6,11 @@ using UnityEngine.UI;
 public class PlayerStats : ObjectStats
 {
     // Start is called before the first frame update
+    public float maxMana = 100f;
+    public float manaRegen = 100f;
     public int damageGive = 50;
     private Slider healthSlider;
+    float currentMana;
 
     public override void TakeDamage(int damage)
     {
@@ -16,10 +19,18 @@ public class PlayerStats : ObjectStats
         healthSlider.value = health;
     }
 
+    public void SpendMana(float cost){
+        currentMana -= cost;   
+    }
+
+    public float getMana(){
+        return currentMana;
+    }
+
     protected override void Start()
     {
         base.Start();
-
+        currentMana = maxMana;
         healthSlider = GameObject.Find("HealthSlider").GetComponent<Slider>();
     } 
     protected override void Dead()
@@ -31,6 +42,7 @@ public class PlayerStats : ObjectStats
     // Update is called once per frame
     protected override void Update()
     {
-        
+        currentMana = Mathf.Clamp(currentMana + (manaRegen * Time.deltaTime), 0f, maxMana);
+        Debug.Log(currentMana);
     }
 }

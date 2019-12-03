@@ -6,8 +6,11 @@ using UnityEngine;
 public class FireballScript : Abilities
 {
 	public GameObject fireballPrefab;
-	public int cost;
-	public override void castSpell(GameObject player, Transform firePoint){
+	public override bool CastSpell(GameObject player, Transform firePoint){
+		if(!base.CastSpell(player, firePoint)) return false;
 		Instantiate(fireballPrefab, firePoint.position, firePoint.rotation);
+		return true;
     }
+
+
 }

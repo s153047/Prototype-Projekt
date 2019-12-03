@@ -27,16 +27,16 @@ public class PlayerAbility : MonoBehaviour
             foreach (char c in Input.inputString) {
                 switch (c) {
                     case '1' :
-                        castSpell(0);
+                        CastSpell(0);
                         break;
                     case '2' :
-                        castSpell(1);
+                        CastSpell(1);
                         break;
                     case '3' :
-                        castSpell(2);
+                        CastSpell(2);
                         break;
                     case '4' :
-                        castSpell(3);
+                        CastSpell(3);
                         break;
                     default :
                         break;
@@ -50,8 +50,8 @@ public class PlayerAbility : MonoBehaviour
         }
     }
 
-    void castSpell(int i){
-        abilityScripts[i].castSpell(gameObject, firePoint);
+    void CastSpell(int i){
+        abilityScripts[i].CastSpell(gameObject, firePoint);
         currentCooldown = globalCooldown;
     }
 

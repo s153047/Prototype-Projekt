@@ -135,6 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  maxMana: 100
+  manaRegen: 100
   damageGive: 0
 --- !u!50 &8604843980792770915
 Rigidbody2D:
