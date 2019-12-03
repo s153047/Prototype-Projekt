@@ -2,7 +2,7 @@
 
 ## Current issues/bugs
  - [ ] Fix objects push each other / maybe change movement to Rigidbody2d.addForce (google det)
- - [x] Generaliser skud, og lav en version for enemies
+ - [ ] cant shoot next to north wall
  - [ ] Animation
 
 ## Minimal viable product
