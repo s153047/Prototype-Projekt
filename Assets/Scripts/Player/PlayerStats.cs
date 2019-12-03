@@ -10,17 +10,18 @@ public class PlayerStats : ObjectStats
     public float manaRegen = 100f;
     public int damageGive = 50;
     private Slider healthSlider;
+    private Slider manaSlider;
     float currentMana;
 
     public override void ChangeHealth(int damage)
     {
         base.ChangeHealth(damage);
 
-        healthSlider.value = Health;
+        healthSlider.value = (float) Health / maxHealth;
     }
 
-    public void SpendMana(float cost){
-        currentMana -= cost;   
+    public void ChangeMana(float change){
+        currentMana = Mathf.Clamp(currentMana + change, 0.0f, maxMana);
     }
 
     public float getMana(){
@@ -32,6 +33,7 @@ public class PlayerStats : ObjectStats
         base.Start();
         currentMana = maxMana;
         healthSlider = GameObject.Find("HealthSlider").GetComponent<Slider>();
+        manaSlider = GameObject.Find("ManaSlider").GetComponent<Slider>();
     } 
     protected override void Dead()
     {
@@ -43,6 +45,7 @@ public class PlayerStats : ObjectStats
     protected override void Update()
     {
         currentMana = Mathf.Clamp(currentMana + (manaRegen * Time.deltaTime), 0f, maxMana);
-        Debug.Log(currentMana);
+        manaSlider.value = currentMana / maxMana;
     }
+
 }

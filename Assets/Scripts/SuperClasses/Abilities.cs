@@ -13,6 +13,6 @@ public class Abilities : ScriptableObject
     	return true;
     }
     public virtual void SpendMana(){
-    	pStats.SpendMana(cost);
+    	pStats.ChangeMana(-cost);
     }
 }
