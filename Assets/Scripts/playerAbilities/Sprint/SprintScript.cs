@@ -24,17 +24,3 @@ public class SprintScript : Abilities
     	pc.sprintOn = false;
     }
 }
-/*
-public class Helper : MonoBehaviour {
-	public static Helper instance;
-     
-	void Start() {
-		Helper.instance = this;
-	}
-
-    IEnumerator removeSprint(PlayerController pc, float duration)
-    {
-    	yield return new WaitForSeconds(duration);
-    	pc.speed = pc.speed / 2;
-    }
-}*/

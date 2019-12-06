@@ -102,6 +102,7 @@ MonoBehaviour:
   rigidbody2d: {fileID: 8604843980792770915}
   baseSpeed: 1
   speed: 1
+  sprintOn: 0
 --- !u!114 &8604843980792770917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,6 +120,8 @@ MonoBehaviour:
     type: 3}
   abilityScripts:
   - {fileID: 11400000, guid: cc674b310a8e9bcd7b989b297e681b97, type: 2}
+  - {fileID: 11400000, guid: ddca830c345f705b1a02da5838579897, type: 2}
+  - {fileID: 11400000, guid: 6364fcd9398506e9f89077271a69ff6f, type: 2}
   - {fileID: 11400000, guid: ddca830c345f705b1a02da5838579897, type: 2}
   globalCooldown: 0
 --- !u!114 &8604843980792770914
