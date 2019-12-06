@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody2d: {fileID: 8604843980792770915}
+  baseSpeed: 1
   speed: 1
 --- !u!114 &8604843980792770917
 MonoBehaviour:
@@ -118,6 +119,7 @@ MonoBehaviour:
     type: 3}
   abilityScripts:
   - {fileID: 11400000, guid: cc674b310a8e9bcd7b989b297e681b97, type: 2}
+  - {fileID: 11400000, guid: ddca830c345f705b1a02da5838579897, type: 2}
   globalCooldown: 0
 --- !u!114 &8604843980792770914
 MonoBehaviour:

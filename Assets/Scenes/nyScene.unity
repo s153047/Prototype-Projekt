@@ -424,6 +424,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8604843980792770937, guid: e7bd197645934814ca1a9a994760dfd8,
+        type: 3}
+      propertyPath: m_Name
+      value: player
+      objectReference: {fileID: 0}
     - target: {fileID: 8604843980792770916, guid: e7bd197645934814ca1a9a994760dfd8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -478,11 +483,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8604843980792770937, guid: e7bd197645934814ca1a9a994760dfd8,
-        type: 3}
-      propertyPath: m_Name
-      value: player
       objectReference: {fileID: 0}
     - target: {fileID: 8604843980792770914, guid: e7bd197645934814ca1a9a994760dfd8,
         type: 3}
@@ -32202,10 +32202,7 @@ MonoBehaviour:
   enemyCurrentWave: 2
   enemiesLeftCurrentWave: 2
   enemyIncreasePerWave: 3
-  enemies:
-  - {fileID: 2642304385717880227, guid: d4fd80c5a0ace5c54997ee284f3155a7, type: 3}
-  - {fileID: 6133079582406175275, guid: f11bed0b0a2206447be37685940fa305, type: 3}
-  - {fileID: 6768791218088743281, guid: a8f53b57143525a4bbf3852cb8a42048, type: 3}
+  enemies: []
   xMin: -8
   xMax: 8
   yMin: -4

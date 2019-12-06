@@ -6,10 +6,15 @@ public class PlayerController : MonoBehaviour
 {
 	public Rigidbody2D rigidbody2d;
     // Start is called before the first frame update
+    public float baseSpeed;
+    [HideInInspector]
     public float speed;
+    [HideInInspector]
+    public bool sprintOn;
     void Start()
     {
     	rigidbody2d = GetComponent<Rigidbody2D>();
+        speed = baseSpeed;
     }
     // Update is called once per frame
     void Update()
