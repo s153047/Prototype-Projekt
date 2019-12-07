@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class PlayerStats : ObjectStats
 {
     // Start is called before the first frame update
+    [HideInInspector]
+    public bool invulnerable = false;
     public float maxMana = 100f;
     public float manaRegen = 100f;
     public int damageGive = 50;
@@ -15,6 +17,7 @@ public class PlayerStats : ObjectStats
 
     public override void ChangeHealth(int damage)
     {
+        if(invulnerable && damage < 0) return;
         base.ChangeHealth(damage);
 
         healthSlider.value = (float) Health / maxHealth;
