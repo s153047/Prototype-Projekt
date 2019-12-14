@@ -32,8 +32,6 @@ public class GameManager : MonoBehaviour
         levelText = GameObject.Find("LevelText").GetComponent<Text>();
         InitNextLevel();
         spawner.Spawn();
-
-
     }
 
     public void InitNextLevel()
@@ -59,6 +57,7 @@ public class GameManager : MonoBehaviour
         }
 
         levelTextOverlay.SetActive(false);
+        levelText.color = originalColor;
     }
 
     public void EnemyDead(GameObject enemy)
