@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Walls
   - Enemy
+  - Orbiter
   layers:
   - Default
   - TransparentFX
