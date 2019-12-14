@@ -112,11 +112,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  attackCooldown: 1
-  currentCooldown: 1
+  attackCooldown: 0.5
+  currentCooldown: 5
   TotemShotPrefab: {fileID: 5374739979470379351, guid: 3a5afebe1d459934a9b94e0241b7766b,
     type: 3}
-  volleyAmount: 2
+  volleyAmount: 5
   yMin: -3
   yMax: 3
 --- !u!61 &3937350793315931338
