@@ -6,7 +6,7 @@ public class BatBehaviour : ObjectBehaviour
 {
     public float changeTime = 3.0f;
     public bool vertical;
-
+    public int damage;
     float timer;
     int direction = 1;
 
@@ -40,5 +40,13 @@ public class BatBehaviour : ObjectBehaviour
         }
  
         rb.MovePosition(position);
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            PlayerStats player = other.GetComponent<PlayerStats>();
+            player.TakeDamage(damage);
+        }
     }
 }
