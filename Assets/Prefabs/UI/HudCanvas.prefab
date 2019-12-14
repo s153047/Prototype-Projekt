@@ -494,7 +494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7147855232800503479}
   m_Layer: 5
-  m_Name: GameObject
+  m_Name: Orbiter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -514,7 +514,7 @@ Transform:
   - {fileID: 648053569221071310}
   - {fileID: 6301013304191738586}
   m_Father: {fileID: 1396423004565442678}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3865457077048866016
 GameObject:
@@ -546,7 +546,7 @@ Transform:
   - {fileID: 6899154115863293868}
   - {fileID: 7972010471587857149}
   m_Father: {fileID: 1396423004565442678}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5158356613927037563
 GameObject:
@@ -610,8 +610,8 @@ Transform:
   - {fileID: 5674552879160949577}
   - {fileID: 308476374906846975}
   - {fileID: 1442493273889167921}
-  - {fileID: 3664506698591954921}
   - {fileID: 7147855232800503479}
+  - {fileID: 3664506698591954921}
   m_Father: {fileID: 7988462026587696746}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
