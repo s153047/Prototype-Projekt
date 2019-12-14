@@ -123,7 +123,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ddca830c345f705b1a02da5838579897, type: 2}
   - {fileID: 11400000, guid: 6364fcd9398506e9f89077271a69ff6f, type: 2}
   - {fileID: 11400000, guid: 8351432240f7db937ae492354661c6d4, type: 2}
-  globalCooldown: 0
+  globalCooldown: 0.5
 --- !u!114 &8604843980792770914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,11 +136,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b4aa82b01538964183b7e5c51be5465, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 1000
   invulnerable: 0
   maxMana: 100
-  manaRegen: 100
+  manaRegen: 2
   damageGive: 0
+  manaPoweredColor: {r: 0, g: 0.9286411, b: 1, a: 1}
 --- !u!50 &8604843980792770915
 Rigidbody2D:
   serializedVersion: 4
@@ -212,7 +213,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8604843981374489980}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.44, y: 0.7, z: 0}
+  m_LocalPosition: {x: 0, y: 0.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8604843980792770916}

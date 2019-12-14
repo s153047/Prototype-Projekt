@@ -13,7 +13,17 @@ public class PlayerStats : ObjectStats
     public int damageGive = 50;
     private Slider healthSlider;
     private Slider manaSlider;
+    private Image manaSliderBar;
+    
     float currentMana;
+
+    private float manaBuffTime;
+    private float manaMultiplier = 1f;
+
+    public Color manaPoweredColor;
+    private Color manaOriginalColor;
+
+
 
     public override void ChangeHealth(int damage)
     {
@@ -37,6 +47,10 @@ public class PlayerStats : ObjectStats
         currentMana = maxMana;
         healthSlider = GameObject.Find("HealthSlider").GetComponent<Slider>();
         manaSlider = GameObject.Find("ManaSlider").GetComponent<Slider>();
+
+        // ... Don't judge
+        manaSliderBar = manaSlider.transform.Find("Fill Area").transform.Find("Fill").GetComponent<Image>();
+        manaOriginalColor = manaSliderBar.color;
     } 
     protected override void Dead()
     {
@@ -47,8 +61,29 @@ public class PlayerStats : ObjectStats
     // Update is called once per frame
     protected override void Update()
     {
-        currentMana = Mathf.Clamp(currentMana + (manaRegen * Time.deltaTime), 0f, maxMana);
+        currentMana = Mathf.Clamp(currentMana + (manaRegen * Time.deltaTime * manaMultiplier), 0f, maxMana);
         manaSlider.value = currentMana / maxMana;
+
+        manaBuffTime -= Time.deltaTime;
+        if (manaBuffTime <= 0f)
+        {
+            manaMultiplier = 1f;
+            manaSliderBar.color = manaOriginalColor;
+        }
     }
 
+
+    public bool ManaBuff(float mult, float time)
+    {
+        if (manaBuffTime > float.Epsilon)
+        {
+            return false;
+        }
+
+        manaBuffTime = time;
+        manaMultiplier = mult;
+
+        manaSliderBar.color = manaPoweredColor;
+        return true;
+    }
 }

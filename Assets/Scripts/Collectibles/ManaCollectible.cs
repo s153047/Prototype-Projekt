@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class ManaCollectible : MonoBehaviour
 {
-    public int manaAmount;
+    public float manaMultiplier;
+    public float buffTime;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         PlayerStats player = other.GetComponent<PlayerStats>();
         if (player != null)
         {
-            player.ChangeMana(manaAmount);
-            Destroy(gameObject);
+            if (player.ManaBuff(manaMultiplier, buffTime))
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }

@@ -12,7 +12,7 @@ public class EnemyStats : ObjectStats
     {
         Vector3 baseDropPosition = gameObject.transform.position;
 
-        // DropManager.Instance.EnemyDied(baseDropPosition, Tier, SpecialDrops);
+        DropManager.Instance.EnemyDied(baseDropPosition, Tier, SpecialDrops);
 
         // Need to call last to ensure we capture transform position from the dead enemy
         GameManager.Instance.EnemyDead(gameObject);
