@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3251049277684428542}
   - component: {fileID: 6630444926251816039}
   - component: {fileID: 4153447250577229776}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 1410521332201674789}
   - component: {fileID: 7679166082293024457}
   - component: {fileID: 2358030679679348906}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fireball Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 1422590111040342340}
   - component: {fileID: 7847848609800126352}
   - component: {fileID: 9043620749481181941}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 1235772145221718990}
   - component: {fileID: 2518873534484561653}
   - component: {fileID: 8273590805519483831}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,7 +315,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1442493273889167921}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Teleport
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -349,7 +349,7 @@ GameObject:
   - component: {fileID: 6089289303125267624}
   - component: {fileID: 4704335229230258538}
   - component: {fileID: 4250217437379131038}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Teleport Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -422,7 +422,7 @@ GameObject:
   - component: {fileID: 8658182322190407886}
   - component: {fileID: 676639644786977629}
   - component: {fileID: 4341064020355014235}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Haste Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,7 +493,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3664506698591954921}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Invincibility
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -525,7 +525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 308476374906846975}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Haste
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -557,7 +557,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1396423004565442678}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Spell List
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -572,7 +572,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5537673263349240144}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 107.81903, y: -49.04579, z: -153.95758}
+  m_LocalPosition: {x: 300, y: -250, z: -153.95758}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5674552879160949577}
@@ -593,7 +593,7 @@ GameObject:
   - component: {fileID: 6899154115863293868}
   - component: {fileID: 6777548536798001954}
   - component: {fileID: 2126846458163238470}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Invincibility Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -666,7 +666,7 @@ GameObject:
   - component: {fileID: 7972010471587857149}
   - component: {fileID: 8304355448152474220}
   - component: {fileID: 7152214143975867873}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1645,11 +1645,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 1
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
@@ -1839,7 +1839,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5674552879160949577}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Fireball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
