@@ -117,8 +117,8 @@ MonoBehaviour:
   TotemShotPrefab: {fileID: 5374739979470379351, guid: 3a5afebe1d459934a9b94e0241b7766b,
     type: 3}
   volleyAmount: 5
-  yMin: -3
-  yMax: 3
+  yMin: -3.7
+  yMax: 3.7
 --- !u!61 &3937350793315931338
 BoxCollider2D:
   m_ObjectHideFlags: 0
