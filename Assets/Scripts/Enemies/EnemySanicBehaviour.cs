@@ -7,13 +7,16 @@ public class EnemySanicBehaviour : ObjectBehaviour
     public Transform target;
 
     GameObject player;
-    float timer;
+    float attackPause;
+    public int damage;
+    public float currentSpeed;
 
     protected override void Start()
     {
         base.Start();
 
         player = GameObject.FindWithTag("Player");
+        currentSpeed = speed;
     }
 
     // Update is called once per frame
@@ -21,12 +24,29 @@ public class EnemySanicBehaviour : ObjectBehaviour
     {
         if (player == null)
             return;
-        
+
         target = player.transform;
-        if (Vector3.Distance(transform.position, target.position) > 1f)
+        if (currentSpeed >= speed)
+        { 
+            if (Vector3.Distance(transform.position, target.position) > 0.5f)
+            {
+                MoveTowards(target.position);
+                RotateTowards(target.position);
+            }
+        } else
         {
-            MoveTowards(target.position);
-            RotateTowards(target.position);
+            currentSpeed += Time.deltaTime;
+        }
+
+
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            PlayerStats player = other.GetComponent<PlayerStats>();
+            player.TakeDamage(damage);
+            currentSpeed = 0;
         }
     }
     
