@@ -35,7 +35,7 @@ public class ObeliskBehaviour : ObjectBehaviour
                     volleyCurrent = Random.Range(xMin, xMax);
                 }
                 volley.Add(volleyCurrent);
-                Vector3 pos = new Vector3(volleyCurrent, 3, 0);
+                Vector3 pos = new Vector3(volleyCurrent, 3.3f, 0);
 
                 Instantiate(ObeliskShotPrefab, pos, Quaternion.identity);
             }
