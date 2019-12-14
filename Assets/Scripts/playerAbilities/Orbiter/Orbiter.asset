@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6cdd1d5d7fcc6d08b7ec4839c4dcf96, type: 3}
-  m_Name: Invulnerability
+  m_Script: {fileID: 11500000, guid: 0cadfa90b255411468df04b371d98669, type: 3}
+  m_Name: Orbiter
   m_EditorClassIdentifier: 
   cost: 50
-  duration: 0.5
+  orbiterPrefab: {fileID: 8160142064114305624, guid: d4c9711535c5b16be94273c1f53192ca,
+    type: 3}

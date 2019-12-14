@@ -9,7 +9,7 @@ public class PlayerStats : ObjectStats
     [HideInInspector]
     public bool invulnerable = false;
     public float maxMana = 100f;
-    public float manaRegen = 100f;
+    public float manaRegen = 20f;
     public int damageGive = 50;
     private Slider healthSlider;
     private Slider manaSlider;
