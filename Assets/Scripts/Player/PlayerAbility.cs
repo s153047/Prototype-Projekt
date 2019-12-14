@@ -36,6 +36,9 @@ public class PlayerAbility : MonoBehaviour
                 case '4' :
                     CastSpell(3);
                     break;
+                case '5' :
+                    CastSpell(4);
+                    break;
                 default :
                     break;
             }
