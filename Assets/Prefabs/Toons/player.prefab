@@ -138,9 +138,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   invulnerable: 0
-  maxMana: 100
-  manaRegen: 100
+  maxMana: 500
+  manaRegen: 2
   damageGive: 0
+  manaPoweredColor: {r: 0, g: 0.9286411, b: 1, a: 1}
 --- !u!50 &8604843980792770915
 Rigidbody2D:
   serializedVersion: 4
