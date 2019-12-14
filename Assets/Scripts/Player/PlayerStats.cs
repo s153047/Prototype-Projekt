@@ -56,6 +56,8 @@ public class PlayerStats : ObjectStats
     {
         healthSlider.value = 0;
         base.Dead();
+
+        GameManager.Instance.PlayerDied();
     }
 
     // Update is called once per frame

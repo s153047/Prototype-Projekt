@@ -14,13 +14,12 @@ public class EnemySpawner : MonoBehaviour
     public float yMin;
     public float yMax;
     public int[] enemyValue;
-    // Start is called before the first frame update
-    void Start()
+
+    void Awake()
     {
         enemyCurrentWave = enemyStartWave;
     }
 
-    // Update is called once per frame
 
     public void Spawn()
     {
@@ -44,7 +43,6 @@ public class EnemySpawner : MonoBehaviour
             GameObject newEnemy = Instantiate(enemies[randomEnemy], pos, Quaternion.identity);
             GameManager.Instance.SpawnEnemies(newEnemy);
             enemiesLeftCurrentWave -= enemyValue[randomEnemy];
-            Debug.Log(enemies[randomEnemy]);
 
         }
 

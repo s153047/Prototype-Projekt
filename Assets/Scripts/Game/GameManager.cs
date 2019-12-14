@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -15,6 +16,10 @@ public class GameManager : MonoBehaviour
     private Text levelText;
     private int level = 0;
     private EnemySpawner spawner;
+    
+    private bool isRunning = false;
+    private GameObject gameOverOverlay;
+    private Text gameOverText;
 
     // Todo: Maybe make generic 'Enemy' class for type safety
     private List<GameObject> enemies = new List<GameObject>();
@@ -26,12 +31,43 @@ public class GameManager : MonoBehaviour
             Instance = this;
         else if (Instance != this)
             Destroy(gameObject);
+
+        InitGameManager();
+    }
+
+    private void InitGameManager()
+    {
+        enemies.Clear();
+        isRunning = true;
         spawner = GameObject.Find("Spawner").GetComponent<EnemySpawner>();
-        DontDestroyOnLoad(gameObject);
         levelTextOverlay = GameObject.Find("LevelTextOverlay");
         levelText = GameObject.Find("LevelText").GetComponent<Text>();
+
+        gameOverOverlay = GameObject.Find("GameOver");
+        gameOverText = GameObject.Find("GameOverHelpText").GetComponent<Text>();
+        gameOverOverlay.SetActive(false);
+
         InitNextLevel();
         spawner.Spawn();
+    }
+
+    public void Update()
+    {
+        if (isRunning)
+            return;
+
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            // Reload scene
+            Debug.Log("Restarting scene");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
+        }
+        else if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            // Exit or go to main screen?
+
+        }
     }
 
     public void InitNextLevel()
@@ -62,7 +98,6 @@ public class GameManager : MonoBehaviour
 
     public void EnemyDead(GameObject enemy)
     {
-        Debug.Log(enemy);
         enemies.Remove(enemy);
         if (enemies.Count == 0)
         {
@@ -73,5 +108,16 @@ public class GameManager : MonoBehaviour
     public void SpawnEnemies(GameObject enemy)
     {
         enemies.Add(enemy);
+    }
+
+    public void PlayerDied()
+    {
+        isRunning = false;
+
+        gameOverText.text = gameOverText.text
+            .Replace("%WAVE%", level.ToString())
+            .Replace("%RESTARTKEY%", "\"space\"")
+            .Replace("%QUITKEY%", "\"escape\"");
+        gameOverOverlay.SetActive(true);
     }
 }
