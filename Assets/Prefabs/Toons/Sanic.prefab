@@ -112,10 +112,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb57fcf71fa9d4942b4a9489e9e2905c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 1
   target: {fileID: 8604843980792770916, guid: e7bd197645934814ca1a9a994760dfd8, type: 3}
   damage: 30
-  currentSpeed: 0
+  waitTime: 2
+  currentTime: 2
 --- !u!50 &-1423917408648339810
 Rigidbody2D:
   serializedVersion: 4
