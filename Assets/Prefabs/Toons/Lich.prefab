@@ -118,7 +118,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   SpecialDrops: []
-  Tier: 1
+  Tier: 2
 --- !u!227 &-2364982340740276670
 BillboardRenderer:
   m_ObjectHideFlags: 0
