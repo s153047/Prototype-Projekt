@@ -22,31 +22,28 @@ public class PlayerAbility : MonoBehaviour
         {
             currentCooldown -= Time.deltaTime;
         }
-        else
+        foreach (char c in Input.inputString) {
+            switch (c) {
+                case '1' :
+                    CastSpell(0);
+                    break;
+                case '2' :
+                    CastSpell(1);
+                    break;
+                case '3' :
+                    CastSpell(2);
+                    break;
+                case '4' :
+                    CastSpell(3);
+                    break;
+                default :
+                    break;
+            }
+        }
+        if (Input.GetButtonDown("Fire1") && currentCooldown <= 0)
         {
-            foreach (char c in Input.inputString) {
-                switch (c) {
-                    case '1' :
-                        CastSpell(0);
-                        break;
-                    case '2' :
-                        CastSpell(1);
-                        break;
-                    case '3' :
-                        CastSpell(2);
-                        break;
-                    case '4' :
-                        CastSpell(3);
-                        break;
-                    default :
-                        break;
-                }
-            }
-            if (Input.GetButtonDown("Fire1"))
-            {
-                Shoot();
-                currentCooldown = globalCooldown;
-            }
+            Shoot();
+            currentCooldown = globalCooldown;
         }
     }
 

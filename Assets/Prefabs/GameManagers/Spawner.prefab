@@ -54,8 +54,8 @@ MonoBehaviour:
   - {fileID: 3955828115750294355, guid: 27424d81596b17e448df28770e474559, type: 3}
   - {fileID: 6877717724326198356, guid: 809c774e3a96b1f419158b0f2a962148, type: 3}
   - {fileID: 6768791218088743281, guid: a8f53b57143525a4bbf3852cb8a42048, type: 3}
-  xMin: -8
-  xMax: 8
+  xMin: -7.6
+  xMax: 7.6
   yMin: -4
-  yMax: 4
+  yMax: 3.6
   enemyValue: 010000000200000003000000030000000300000003000000

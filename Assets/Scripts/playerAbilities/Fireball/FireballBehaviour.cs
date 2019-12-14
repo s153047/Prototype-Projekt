@@ -7,10 +7,14 @@ public class FireballBehaviour : ProjectileBehaviour
     public GameObject exploPrefab;
 	public float explosionRadius = 1.0f;
 	Vector3 endPoint;
+    float angle;
+
 	protected override void Start(){
     	base.Start();
 		endPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     	endPoint.z = 0;
+        angle = Mathf.Atan2(moveDirection.y, moveDirection.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(Vector3.forward * (angle+90f));
 	}
     protected override void Update()
     {
