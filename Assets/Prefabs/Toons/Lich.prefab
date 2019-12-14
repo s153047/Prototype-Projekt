@@ -116,7 +116,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc2bcbbe1c65e4e6aad6d852c56cb8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 300
+  maxHealth: 100
+  SpecialDrops: []
+  Tier: 1
 --- !u!227 &-2364982340740276670
 BillboardRenderer:
   m_ObjectHideFlags: 0
@@ -176,7 +178,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &-6050143787266099888
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -194,7 +196,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.36, y: 0.56}
+    oldSize: {x: 1.125, y: 1.75}
     newSize: {x: 0.36, y: 0.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
