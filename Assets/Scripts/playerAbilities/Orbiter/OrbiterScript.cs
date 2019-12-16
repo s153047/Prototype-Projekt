@@ -9,6 +9,7 @@ public class OrbiterScript : Abilities
 	public float duration = 5f;
 	GameObject orbInstance;
 	public override bool CastSpell(GameObject player, Transform firePoint){
+		if(GameObject.FindWithTag("Orbiter") != null) return false;
 		if(!base.CastSpell(player, firePoint)) return false;
 		orbInstance = Instantiate(orbiterPrefab, firePoint.position, firePoint.rotation);
 		OrbiterBehaviour orbBehav = orbInstance.GetComponent<OrbiterBehaviour>();

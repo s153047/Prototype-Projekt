@@ -2129,7 +2129,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'You reached wave %WAVE%.
 
-    Press %RESTARTKEY% to try again, or %QUITKEY% to exit.'
+    Press %RESTARTKEY% to try again.'
 --- !u!1 &8446009438325721522
 GameObject:
   m_ObjectHideFlags: 0

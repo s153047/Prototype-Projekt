@@ -27,17 +27,14 @@ public class DropManager : MonoBehaviour
     {
         if (!Tier1Drops.Any() || !Tier2Drops.Any())
         {
-            Debug.LogError("Missing tier drops!");
             return;
         }
 
-        Debug.Log($"Enemy tier {tier} died!");
 
         // Just do a 50% drop chance for now
         var roll = Random.Range(0, 100);
         if (roll >= 50)
         {
-            Debug.Log("Should drop something now...");
 
             // Now check if it's tier 1 or 2
             roll = Random.Range(0, Tier1Weight + Tier2Weight + 1);
@@ -45,13 +42,11 @@ public class DropManager : MonoBehaviour
             // T1 drop
             if (roll < Tier1Weight)
             {
-                Debug.Log("Tier1 drop!");
                 SpawnDrop(pos, Tier1Drops[Random.Range(0, Tier1Drops.Length)]);
             }
             // T2 drop
             else if (tier >= 2)
             {
-                Debug.Log("Tier2 drop!");
                 SpawnDrop(pos, Tier2Drops[Random.Range(0, Tier2Drops.Length)]);
             }
         }
@@ -64,7 +59,6 @@ public class DropManager : MonoBehaviour
             if (roll >= 95)
             {
                 var specialItem = specialDrops[Random.Range(0, specialDrops.Length)];
-                Debug.Log($"Special item drop: {specialItem.name}");
                 SpawnDrop(pos, specialItem);
             }
         }
