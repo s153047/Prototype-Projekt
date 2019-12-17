@@ -460,11 +460,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8604843980792770914, guid: e7bd197645934814ca1a9a994760dfd8,
-        type: 3}
-      propertyPath: manaRegen
-      value: 100
-      objectReference: {fileID: 0}
     - target: {fileID: 8604843980792770918, guid: e7bd197645934814ca1a9a994760dfd8,
         type: 3}
       propertyPath: baseSpeed

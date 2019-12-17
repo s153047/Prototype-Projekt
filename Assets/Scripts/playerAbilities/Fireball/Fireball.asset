@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2507f8a3bf2c8c013bb3abcae618b39b, type: 3}
   m_Name: Fireball
   m_EditorClassIdentifier: 
-  cost: 99
+  cost: 100
   fireballPrefab: {fileID: 8160142064114305624, guid: 827c498b63aa84993b0c9bb303a8c643,
     type: 3}

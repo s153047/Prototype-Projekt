@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc2bcbbe1c65e4e6aad6d852c56cb8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 150
   SpecialDrops: []
   Tier: 1
 --- !u!114 &-8082663162574663336
@@ -112,11 +112,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  attackCooldown: 0.5
-  currentCooldown: 5
+  attackCooldown: 1
+  currentCooldown: 4
   TotemShotPrefab: {fileID: 5374739979470379351, guid: 3a5afebe1d459934a9b94e0241b7766b,
     type: 3}
-  volleyAmount: 5
+  volleyAmount: 2
   yMin: -3.7
   yMax: 3.7
 --- !u!61 &3937350793315931338

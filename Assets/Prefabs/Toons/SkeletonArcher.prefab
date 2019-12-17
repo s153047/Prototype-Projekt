@@ -113,7 +113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   target: {fileID: 8604843980792770916, guid: e7bd197645934814ca1a9a994760dfd8, type: 3}
-  attackCooldown: 1
+  attackCooldown: 2
   currentCooldown: 1
   ArcherShotPrefab: {fileID: 8832417545078964738, guid: 604602e96c3cec5488e71f794bd97050,
     type: 3}

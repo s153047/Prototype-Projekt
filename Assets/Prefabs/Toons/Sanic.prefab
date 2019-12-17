@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc2bcbbe1c65e4e6aad6d852c56cb8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 200
   SpecialDrops: []
   Tier: 1
 --- !u!114 &-5637097177039998983
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 1
   target: {fileID: 8604843980792770916, guid: e7bd197645934814ca1a9a994760dfd8, type: 3}
-  damage: 30
+  damage: 100
   waitTime: 2
   currentTime: 2
 --- !u!50 &-1423917408648339810

@@ -8,9 +8,9 @@ public class PlayerStats : ObjectStats
     // Start is called before the first frame update
     [HideInInspector]
     public bool invulnerable = false;
-    public float maxMana = 100f;
-    public float manaRegen = 20f;
-    public int damageGive = 50;
+    public float maxMana;
+    public float manaRegen;
+    public int damageGive;
     private Slider healthSlider;
     private Slider manaSlider;
     private Image manaSliderBar;

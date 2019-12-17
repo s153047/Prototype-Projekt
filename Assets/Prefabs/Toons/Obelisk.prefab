@@ -97,11 +97,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  attackCooldown: 1
+  attackCooldown: 1.5
   currentCooldown: 1
   ObeliskShotPrefab: {fileID: 2407969831223545508, guid: 7976ade41042f574092b37c3141b05d7,
     type: 3}
-  volleyAmount: 2
+  volleyAmount: 4
   xMin: -7.5
   xMax: 7.5
 --- !u!114 &7758007871609270153
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc2bcbbe1c65e4e6aad6d852c56cb8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 250
   SpecialDrops: []
   Tier: 1
 --- !u!50 &408322727873511224

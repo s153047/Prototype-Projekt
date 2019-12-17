@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc2bcbbe1c65e4e6aad6d852c56cb8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 300
   SpecialDrops: []
   Tier: 2
 --- !u!227 &-2364982340740276670

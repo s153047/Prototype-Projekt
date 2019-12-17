@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cadfa90b255411468df04b371d98669, type: 3}
   m_Name: Orbiter
   m_EditorClassIdentifier: 
-  cost: 50
+  cost: 75
   orbiterPrefab: {fileID: 8160142064114305624, guid: d4c9711535c5b16be94273c1f53192ca,
     type: 3}
+  duration: 5

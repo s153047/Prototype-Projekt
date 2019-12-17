@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4961f030735dcef4a8a6b4642c0df039, type: 3}
   m_Name: Sprint
   m_EditorClassIdentifier: 
-  cost: 20
+  cost: 50
   duration: 2
