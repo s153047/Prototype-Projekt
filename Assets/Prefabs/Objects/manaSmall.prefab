@@ -111,5 +111,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b50eb3a3dff98942a30e86119a69cf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manaMultiplier: 2.5
-  buffTime: 5
+  manaMultiplier: 4
+  buffTime: 10

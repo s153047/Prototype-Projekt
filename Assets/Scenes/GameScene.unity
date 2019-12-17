@@ -460,11 +460,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8604843980792770918, guid: e7bd197645934814ca1a9a994760dfd8,
-        type: 3}
-      propertyPath: baseSpeed
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7bd197645934814ca1a9a994760dfd8, type: 3}
 --- !u!1001 &1171937523
@@ -69372,40 +69367,15 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8482844159561372849, guid: dc31f70e752b22f4981a05f8c8410a88,
+    - target: {fileID: 8482844160475959989, guid: dc31f70e752b22f4981a05f8c8410a88,
         type: 3}
-      propertyPath: xMin
-      value: -7.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8482844159561372849, guid: dc31f70e752b22f4981a05f8c8410a88,
-        type: 3}
-      propertyPath: xMax
-      value: 7.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8482844159561372849, guid: dc31f70e752b22f4981a05f8c8410a88,
-        type: 3}
-      propertyPath: yMin
-      value: -3.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8482844159561372849, guid: dc31f70e752b22f4981a05f8c8410a88,
-        type: 3}
-      propertyPath: yMax
-      value: 3.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8482844159561372849, guid: dc31f70e752b22f4981a05f8c8410a88,
-        type: 3}
-      propertyPath: enemyValue.Array.data[3]
+      propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8482844159561372849, guid: dc31f70e752b22f4981a05f8c8410a88,
+    - target: {fileID: 3980755290971076484, guid: dc31f70e752b22f4981a05f8c8410a88,
         type: 3}
-      propertyPath: enemyValue.Array.data[5]
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8482844159561372849, guid: dc31f70e752b22f4981a05f8c8410a88,
-        type: 3}
-      propertyPath: enemyValue.Array.data[4]
-      value: 4
+      propertyPath: m_RootOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc31f70e752b22f4981a05f8c8410a88, type: 3}
