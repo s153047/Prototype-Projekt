@@ -391,6 +391,13 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3065738974558979630, guid: 7f05cfa64e1869442a6bf96f02e02ff8,
+        type: 3}
+      propertyPath: m_Text
+      value: 'You reached wave %WAVE%.
+
+        Press %RESTARTKEY% to try again, or %QUITKEY% to exit.'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f05cfa64e1869442a6bf96f02e02ff8, type: 3}
 --- !u!1001 &843808179

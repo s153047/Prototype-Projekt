@@ -6,8 +6,13 @@ using UnityEngine.EventSystems;
 
 public class MainMenuToGame : MonoBehaviour
 {
-    public void TaskOnClick()
+    public void Click_StartGame()
     {
         SceneManager.LoadScene(1);
+    }
+
+    public void Click_ExitGame()
+    {
+        Application.Quit();
     }
 }

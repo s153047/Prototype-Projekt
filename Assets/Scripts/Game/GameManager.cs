@@ -65,8 +65,8 @@ public class GameManager : MonoBehaviour
         }
         else if (Input.GetKeyUp(KeyCode.Escape))
         {
-            // Exit or go to main screen?
-
+            // Go to main screen
+            SceneManager.LoadScene(0);
         }
     }
 
